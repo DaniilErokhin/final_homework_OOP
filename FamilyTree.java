@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Comparator;
 
 public class FamilyTree implements Serializable, Iterable<Human>{
     private long humansId;
@@ -109,10 +110,14 @@ public class FamilyTree implements Serializable, Iterable<Human>{
     }
 
     public void sortByName(){
-        humanList.sort(new HumanComparatorByName());
+        humanList.sort(new HumanComporatorByName());
     }
 
     public void sortByBirthDate(){
         humanList.sort(newComparatorByBirthDate());
+    }
+
+    private Comparator<? super Human> newComparatorByBirthDate() {
+        return null;
     }
 }

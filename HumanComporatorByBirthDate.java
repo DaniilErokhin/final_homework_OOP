@@ -1,5 +1,4 @@
 package family_tree;
-import family_tree.human.Human;
 import java.util.Comparator;
 public class HumanComporatorByBirthDate implements Comparator<Human>{
     @Override

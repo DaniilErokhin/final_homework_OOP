@@ -5,14 +5,14 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args){
         String filePath = "family_tree/tree.out";
-        FileHandler fileHander = new FileHandler();
+        fileHandler fileHander = new fileHandler();
 
         FamilyTree tree = testTree();
         System.out.println(tree);
 
-        fileHandler.save(tree, filePath);
+        fileHander.save(tree, filePath);
 
-        FileHandler fileHabdler =  new FileHandler();
+        fileHandler fileHabdler =  new fileHandler();
         FamilyTree tre = (FamilyTree) fileHandler.read(filePath);
         System.out.println(tree);
     }
